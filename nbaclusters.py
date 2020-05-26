@@ -120,6 +120,8 @@ def main():
     The result should group similar types of players together...likely there will be a superstar cluster that dominate all stats, a big-man cluster that pulls tons of rebounds, and a guard cluster that contributes tons of assists.
 
     Play around with different year combos and see the results below!""")
+    st.write('<img src="https://www.google-analytics.com/collect?v=1&tid=UA-18433914-1&cid=555&aip=1&t=event&ec=nba_clusters&ea=nba_clusters">',unsafe_allow_html=True)
+    st.write('---')
 
     year = df.Year.unique()
     year_min = st.selectbox('Select beginning year - ',year,0)
@@ -128,6 +130,9 @@ def main():
 
     if st.button('Go!'):
         nba_cluster_by_season(df, clusters, year_min, year_max)
+        #st.write('<img src="https://www.google-analytics.com/collect?v=1&tid=UA-18433914-1&cid=555&aip=1&t=event&ec=nba_clusters&ea=year_min_'+str(year_min)+'_year_max_'+str(year_max)+'_clusters_'+str(clusters)+">',unsafe_allow_html=True)
+        st.write('<img src="https://www.google-analytics.com/collect?v=1&tid=UA-18433914-1&cid=555&aip=1&t=event&ec=nba_clusters&ea=year_min_'+str(year_min)+'_year_max_'+str(year_max)+'_clusters_'+str(clusters)+'">',unsafe_allow_html=True)
+
         st.write("""
         ## Table of NBA Stats
         Here is a table of all of the NBA Stats that are going into the clustering algorithms:
