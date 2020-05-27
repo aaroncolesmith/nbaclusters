@@ -113,6 +113,8 @@ def main():
            'Clustering NBA Player Careers by All Stats',
           'Clustering NBA Player Careers by Per Game Stats']
 
+    st.image('./images/nba_header.png',use_column_width=True)
+
     st.write("""
     # NBA Clusters
     The goal of this page is to take the yearly stats for a period of time (beginning and ending year below), select the # of clusters and group players together based on their yearly stats.
