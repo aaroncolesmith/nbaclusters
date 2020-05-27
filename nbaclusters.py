@@ -113,7 +113,7 @@ def main():
            'Clustering NBA Player Careers by All Stats',
           'Clustering NBA Player Careers by Per Game Stats']
 
-    st.image('./images/nba_header.png',use_column_width=True)
+    st.image('./images/nba_header.png',caption='See if superstar MJ, assist-legend Stockton, and rim-protection, finger-wagging Dikembe end up in different clusters', use_column_width=True)
 
     st.write("""
     # NBA Clusters
