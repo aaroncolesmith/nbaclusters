@@ -72,7 +72,7 @@ def nba_cluster_by_career(df, clusters):
     df['TPG'] = df['TOV']/df['G']
     df['All_Stat_PG'] = df['All_Stat']/df['G']
     df=df.round({'PPG': 1, 'APG':1, 'RPG':1,'BPG':1,'SPG':1,'PPM':1,'All_Stat_PM':1})
-
+    clusters=7
     d = df.drop(['Rk','Player','Age'],axis=1)
     df = cluster_nba(df, d, clusters)
     title = 'Clustering NBA Player Careers by All Stats'
@@ -92,7 +92,7 @@ def nba_cluster_by_career_per_game(df, clusters):
     df = df.loc[df.MP > 0]
     df=df.round({'PPG': 1, 'APG':1, 'RPG':1,'BPG':1,'SPG':1,'PPM':1,'All_Stat_PM':1})
 
-    clusters=8
+    clusters=7
     d = df.drop(['Player','Rk','Age','G','GS','MP','FG','FGA','3P','3PA','2P','2PA','FT','FTA','ORB','DRB','TRB','AST','STL','BLK','TOV','PTS','All_Stat'],axis=1)
     df = cluster_nba(df, d, clusters)
     title = 'Clustering NBA Player Careers by Per Game Stats'
