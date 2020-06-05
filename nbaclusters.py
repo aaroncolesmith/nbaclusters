@@ -129,7 +129,8 @@ def main():
     year = df.Year.unique()
     year_min = st.selectbox('Select beginning year - ',year,0)
     year_max = st.selectbox('Select ending year - ',[row for row in year if row >= year_min],len([row for row in year if row >= year_min])-1)
-    clusters = st.selectbox('Number of clusters',[2,3,4,5,6,7,8,9,10,11],5)
+    # clusters = st.selectbox('Number of clusters',[2,3,4,5,6,7,8,9,10,11],5)
+    clusters = st.slider('Number of clusters',2,12,5)
 
     if st.button('Go!'):
         nba_cluster_by_season(df, clusters, year_min, year_max)
